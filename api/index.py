@@ -19,8 +19,8 @@ DRAFTS_KEY = "whatsapp:pending_drafts"
 try:
     from upstash_redis import Redis as UpstashRedis
     _redis = UpstashRedis(
-        url=os.environ["KV_REST_API_URL"],
-        token=os.environ["KV_REST_API_TOKEN"],
+        url=os.environ["UPSTASH_REDIS_REST_URL"],
+        token=os.environ["UPSTASH_REDIS_REST_TOKEN"],
     )
     USE_REDIS = True
 except Exception:
